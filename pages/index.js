@@ -4,9 +4,9 @@ import styles from "../styles/Home.module.css";
 import { Nav } from "../components/nav";
 import { Hero } from "../components/hero";
 import { Intro } from "../components/intro";
-import { Treatments } from "../components/treatments";
 import { CatelogueSnippet } from "../components/catelogue/catelogueSnippet";
 import { Schemes } from "../components/schemes";
+import { Treatments } from "../components/treatmentTemplate/treatments";
 
 export default function Home() {
   return (

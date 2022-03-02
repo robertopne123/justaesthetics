@@ -101,7 +101,7 @@ export const Nav = () => {
           </div>
         </div>
         <div className="bg-black max-h-[30px] flex flex-row md:justify-center justify-start md:gap-10 px-4">
-          <MenuItem text="Treatments" link="/" />
+          <MenuItem text="Treatments" link="/treatments" />
           <MenuItem text="Catalogue" link="/catalogue" />
           <MenuItem text="Bookings" link="/" />
           <div className="bg-black h-[80px] w-[80px] -translate-y-[25px] rounded-full overflow-clip border-2 border-white shadow-lg z-20">
