@@ -108,7 +108,7 @@ export const Nav = () => {
             <img src="/logo.png"></img>
           </div>
           <MenuItem text="Isagenix" link="/" />
-          <MenuItem text="About" link="/" />
+          <MenuItem text="About" link="/about" />
           <MenuItem text="Contact" link="/contacts" />
         </div>
         <div
