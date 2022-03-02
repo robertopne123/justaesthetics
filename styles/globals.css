@@ -18,7 +18,11 @@ a {
 }
 
 p,
-h3 {
+h3,
+h1,
+input,
+textarea,
+select {
   font-family: "Source Serif Pro", serif;
 }
 
