@@ -30,7 +30,7 @@ export default function catalogue() {
           className="absolute top-0 left-0 -z-20"
         />
         <div className="flex flex-col h-full justify-center gap-2 z-20">
-          <img src="/cosmedlogo.png" className="w-[100px]" />
+          <img src="/cosmedlogo.png" className="w-[100px] mx-auto " />
           <h3 className="font-bold text-black text-2xl leading-5 text-center">
             Professional
           </h3>

@@ -60,6 +60,7 @@ export default function contact() {
           alt="Banner Image"
           layout="fill"
           objectFit="cover"
+          priority
           className="w-screen h-full object-cover absolute top-0 left-0"
         />
         <div className="relative w-full bg sm:mt-24 mt-8 mb-8 min-h-[00px] max-w-[1200px] mx-auto px-4">
