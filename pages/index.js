@@ -7,6 +7,7 @@ import { Intro } from "../components/intro";
 import { CatelogueSnippet } from "../components/catelogue/catelogueSnippet";
 import { Schemes } from "../components/schemes";
 import { Testimonials } from "../components/testimonials";
+import { Treatments } from "../components/treatmentTemplate/treatments";
 
 export default function Home() {
   return (

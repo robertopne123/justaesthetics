@@ -5,24 +5,50 @@ export const Treatments = () => {
     <>
       <div className="max-w-[1200px] mx-auto grid smmd:grid-cols-4 grid-cols-2 smsm:grid-cols-1 gap-4 px-4">
         <Treatment
-          image="/placeholder.png"
-          title="Anti-Aging Treatments"
-        ></Treatment>
-        <Treatment image="/placeholder.png" title="Skintox"></Treatment>
+          image="/treatments/antiwrinkle.jpg"
+          title="Anti-wrinkle Treatments"
+          link="/treatments/anti-wrinkletreatment"
+        />
         <Treatment
-          image="/placeholder.png"
+          image="/treatments/skintox.png"
+          title="Skintox"
+          link="/treatments/skintox"
+        />
+        <Treatment
+          image="/treatments/eyelash.jpg"
           title="Eyelash Growth Serum"
-        ></Treatment>
+          link="/treatments/eyelashgrowthserum"
+        />
+        <Treatment
+          image="/treatments/collagen.jpg"
+          title="Skin Fusion Treatment"
+          link="/treatments/skinfusiontreatment"
+        />
         <Treatment
           image="/treatments/chemical-peel.jpg"
           title="Chemical Peel"
-        ></Treatment>
+          link="/treatments/chemicalpeel"
+        />
+        <Treatment
+          image="/treatments/dermapeel.jpg"
+          title="Dermapeel"
+          link="/treatments/dermapeel"
+        />
         <Treatment
           image="/treatments/dermaplane.jpg"
           title="Dermaplane"
-        ></Treatment>
-        <Treatment image="/placeholder.png" title="Dermal Fillers"></Treatment>
-        <Treatment image="/placeholder.png" title="Lips"></Treatment>
+          link="/treatments/dermaplane"
+        />
+        <Treatment
+          image="/treatments/dermafiller.jpg"
+          title="Dermal Fillers"
+          link="/treatments/dermalfillers"
+        />
+        <Treatment
+          image="/placeholder.png"
+          title="Lips"
+          link="/treatments/lips"
+        />
       </div>
     </>
   );

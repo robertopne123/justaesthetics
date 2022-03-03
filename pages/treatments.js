@@ -15,8 +15,8 @@ export default function catalogue() {
       </Head>
 
       <Nav />
-      <div className="smmd:h-[400px] bg-gray-300 relative -z-20">
-        <div className="absolute top-0 left-0 object-cover w-full smmd:h-[400px] h-full -z-10">
+      <div className="h-[450px] bg-gray-300 relative -z-20 mb-16">
+        <div className="relative  object-cover w-full  h-[450px] ">
           <Image
             src="/lipbanner.png"
             alt="Banner Image"
@@ -26,93 +26,170 @@ export default function catalogue() {
           />
         </div>
 
-        <div className="pt-24 ">
-          <h1 className="mt-4 text-left z-20 px-32 text-white text-3xl font-semibold">
+        <div className="pt-24 absolute top-0 left-0">
+          <h1 className="mt-4 text-left z-20 px-4 sm:px-8 md:px-16 text-white text-3xl font-semibold">
             Aesthetic Treatments
           </h1>
-          <p className="w-1/2 px-32 mt-4 text-left z-20 text-xl text-white">
+          <p className=" md:w-1/2 px-4 sm:px-8 md:px-16 mt-4 text-left  z-20 text-md sm:text-xl text-white">
             We specialise in wellbeing, aesthetic and skin treatments to bring
             value and happiness to our clients’ lives. For any questions left
-            unanswered please refer to our <a>FAQ</a> or contact us via{" "}
-            <a>our form</a>
+            unanswered please refer to our FAQ or contact us via our form
           </p>
         </div>
       </div>
 
-      <div className="mt-24 bg-lightGrey p-8 mx-24">
+      <div className="mt-16 bg-lightGrey p-8 max-w-[800px] min-mx-4 mx-auto">
         <div className="grid grid-cols-1 gap-y-5 bg-white p-8">
           <h2 className=" text-2xl font-semibold text-center">
             Consulations For
           </h2>
-          <p> Anti-Wrinkle treatment</p>
-          <p> Skintox</p>
-          <p>Eyelash Growth Serum</p>
+          <Link href="/treatments/anti-wrinkletreatment" passHref>
+            <a>
+              <p className="font-semibold"> Anti-Wrinkle treatment</p>
+            </a>
+          </Link>
+          <Link href="/treatments/skintox" passHref>
+            <a>
+              <p className="font-semibold"> Skintox</p>
+            </a>
+          </Link>
+          <Link href="/treatments/eyelashgrowthserum" passHref>
+            <a>
+              <p className="font-semibold">Eyelash Growth Serum</p>
+            </a>
+          </Link>
           <p> Treatment From £100</p>
         </div>
-        <div className="grid grid-cols-2 gap-y-5 bg-white p-8 mt-8">
-          <h2 className="col-span-2 text-2xl font-semibold text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 bg-white p-8 mt-8">
+          <h2 className="col-span-1 sm:col-span-2 text-2xl font-semibold text-center">
             Golden Collagen Skin Fusion Treatment
           </h2>
-          <p>1 Area</p>
-          <p className="text-right">£200</p>
-          <p>2 Areas</p>
-          <p className="text-right">£300</p>
-          <p>3 Areas</p>
-          <p className="text-right">£400</p>
-          <p>Revital-Eyes</p>
-          <p className="text-right">£150</p>
+          <Link href="/treatments/skinfusiontreatment" passHref>
+            <a>
+              <p className="font-semibold">1 Area</p>
+            </a>
+          </Link>
+          <p className="sm:text-right">£200</p>
+          <Link href="/treatments/skinfusiontreatment" passHref>
+            <a>
+              <p className="font-semibold">2 Areas</p>
+            </a>
+          </Link>
+          <p className="sm:text-right">£300</p>
+          <Link href="/treatments/skinfusiontreatment" passHref>
+            <a>
+              <p className="font-semibold">3 Areas</p>
+            </a>
+          </Link>
+          <p className="sm:text-right">£400</p>
+          <Link href="/treatments/skinfusiontreatment" passHref>
+            <a>
+              <p className="font-semibold">Revital-Eyes</p>
+            </a>
+          </Link>
+          <p className="sm:text-right">£150</p>
         </div>
-        <div className="grid grid-cols-3 gap-y-5 bg-white p-8 mt-8">
-          <h2 className="col-span-3 text-2xl font-semibold text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-5 bg-white p-8 mt-8">
+          <h2 className="cols-span-1 sm:col-span-3 text-2xl font-semibold text-center">
             Medical Grade Skin Care Treatments
           </h2>
-          <p>Chemical Peel</p>
-          <p className="text-center">X1 £50</p>
-          <p className="text-right">X4 £160</p>
-          <p>Luxury Chemical Peel</p>
-          <p className="text-center">X1 £70</p>
-          <p className="text-right">X4 £240</p>
-          <p>Dermapeel</p>
-          <p className="text-center">X1 £60</p>
-          <p className="text-right">X4 £200</p>
-          <p>Luxury Dermapeel</p>
-          <p className="text-center">X1 £80</p>
-          <p className="text-right">X4 £280</p>
-          <p>Dermaplane</p>
-          <p className="text-center">X1 £40</p>
-          <p className="text-right">X4 £140</p>
-          <p>The Ultimate dermaplane</p>
-          <p className="text-center">X1 £50</p>
-          <p className="text-right">X4 £180</p>
+          <Link href="/treatments/chemicalpeel" passHref>
+            <a>
+              <p className="font-semibold">Chemical Peel</p>
+            </a>
+          </Link>
+          <p className="sm:text-center">X1 £50</p>
+          <p className="sm:text-right">X4 £160</p>
+          <Link href="/treatments/chemicalpeel" passHref>
+            <a>
+              <p className="font-semibold">Luxury Chemical Peel</p>
+            </a>
+          </Link>
+          <p className="sm:text-center">X1 £70</p>
+          <p className="sm:text-right">X4 £240</p>
+          <Link href="/treatments/dermapeel" passHref>
+            <a>
+              <p className="font-semibold">Dermapeel</p>
+            </a>
+          </Link>
+          <p className="sm:text-center">X1 £60</p>
+          <p className="sm:text-right">X4 £200</p>
+          <Link href="/treatments/dermapeel" passHref>
+            <a>
+              <p className="font-semibold">Luxury Dermapeel</p>
+            </a>
+          </Link>
+          <p className="sm:text-center">X1 £80</p>
+          <p className="sm:text-right">X4 £280</p>
+          <Link href="/treatments/dermaplane" passHref>
+            <a>
+              <p className="font-semibold">Dermaplane</p>
+            </a>
+          </Link>
+          <p className="sm:text-center">X1 £40</p>
+          <p className="sm:text-right">X4 £140</p>
+          <Link href="/treatments/dermaplane" passHref>
+            <a>
+              <p className="font-semibold">The Ultimate dermaplane</p>
+            </a>
+          </Link>
+          <p className="sm:text-center">X1 £50</p>
+          <p className="sm:text-right">X4 £180</p>
         </div>
-        <div className="grid grid-cols-2 gap-y-5 bg-white p-8 mt-8">
-          <h2 className="col-span-2 text-2xl font-semibold text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 bg-white p-8 mt-8">
+          <h2 className="col-span-1 sm:col-span-2 text-2xl font-semibold text-center">
             Dermal Fillers
           </h2>
-          <p>Cheeks</p>
-          <p className="text-right">FROM £150</p>
-          <p>Nose To Mouth</p>
-          <p className="text-right">FROM £150</p>
-          <p>Mouth To Chin</p>
-          <p className="text-right">FROM £150</p>
-          <p>Peri-Oral Lines</p>
-          <p className="text-right" w>
-            FROM £150
-          </p>
+          <Link href="/treatments/dermalfillers" passHref>
+            <a>
+              <p className="font-semibold">Cheeks</p>
+            </a>
+          </Link>
+          <p className="sm:text-right ">FROM £150</p>
+          <Link href="/treatments/dermalfillers" passHref>
+            <a>
+              <p className="font-semibold">Nose To Mouth</p>
+            </a>
+          </Link>
+          <p className="sm:text-right">FROM £150</p>
+          <Link href="/treatments/dermalfillers" passHref>
+            <a>
+              <p className="font-semibold">Mouth To Chin</p>
+            </a>
+          </Link>
+          <p className="sm:text-right">FROM £150</p>
+          <Link href="/treatments/dermalfillers" passHref>
+            <a>
+              <p className="font-semibold">Peri-Oral Lines</p>
+            </a>
+          </Link>
+          <p className="sm:text-right">FROM £150</p>
         </div>
-        <div className="grid grid-cols-3 gap-y-5 bg-white p-8 mt-8">
-          <h2 className="col-span-3 text-2xl font-semibold text-center">
-            Medical Grade Skin Care Treatments
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-5 bg-white p-8 mt-8">
+          <h2 className="col-span-1 sm:col-span-3 text-2xl font-semibold text-center">
+            Lips
           </h2>
-          <p>Juvederm Ultra</p>
-          <p className="text-center">1/2ml £150</p>
-          <p className="text-right">1ml £150</p>
-          <p>Juvederm Vycross</p>
-          <p className="text-center">1/2ml £150</p>
-          <p className="text-right">1ml £150</p>
-          <p className="col-span-3">
-            Other Premium Brands Available Upon Request
-          </p>
+          <Link href="/treatments/lips" passHref>
+            <a>
+              <p className="font-semibold">Juvederm Ultra</p>
+            </a>
+          </Link>
+          <p className="sm:text-center">1/2ml £150</p>
+          <p className="sm:text-right">1ml £200</p>
+          <Link href="/treatments/lips" passHref>
+            <a>
+              <p className="font-semibold">Juvederm Vycross</p>
+            </a>
+          </Link>
+          <p className="sm:text-center">1/2ml £175</p>
+          <p className="sm:text-right">1ml £300</p>
+          <Link href="/treatments/lips" passHref>
+            <a>
+              <p className="font-semibold col-span-1 sm:col-span-3">
+                Other Premium Brands Available Upon Request
+              </p>
+            </a>
+          </Link>
         </div>
       </div>
 

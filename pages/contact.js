@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import { Nav } from "../components/nav";
 import { Hero } from "../components/hero";
 import { Intro } from "../components/intro";
-import { Treatments } from "../components/treatments";
+
 import { CatelogueSnippet } from "../components/catelogue/catelogueSnippet";
 import { Schemes } from "../components/schemes";
 
@@ -63,10 +63,10 @@ export default function contact() {
           className="w-screen h-full object-cover absolute top-0 left-0"
         />
         <div className="relative w-full bg sm:mt-24 mt-8 mb-8 min-h-[00px] max-w-[1200px] mx-auto px-4">
-          <div className="absolute h-full w-full relative"></div>
+          <div className=" h-full w-full relative"></div>
           <div className="w-full px-4 absolute left-0 top-0 z-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="flex flex-col justify-center">
-              <h3 className="text-3xl md:pl-4 mb-8 mt-12 text-3xl text-center md:text-start">
+              <h3 className=" md:pl-4 mb-8 mt-12 text-3xl text-center md:text-start">
                 Message Us
               </h3>
               <form

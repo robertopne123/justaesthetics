@@ -102,14 +102,17 @@ export const Nav = () => {
         </div>
         <div className="bg-black max-h-[30px]">
           <div className="bg-black mx-auto max-h-[30px] max-w-[900px] flex flex-row md:grid md:grid-cols-7 md:justify-center justify-start md:gap-10 px-4">
-            <MenuItem text="Treatments" link="/" />
+            <MenuItem text="Treatments" link="/treatments" />
             <MenuItem text="Catalogue" link="/catalogue" />
-            <MenuItem text="Bookings" link="/" />
+
             <div className="bg-black h-[80px] w-[80px] -translate-y-[25px] rounded-full overflow-clip border-2 border-white shadow-lg z-20 md:mx-auto">
               <img src="/logo.png"></img>
             </div>
-            <MenuItem text="Isagenix" link="/" />
-            <MenuItem text="About" link="/" />
+            <MenuItem
+              text="Isagenix"
+              link="https://justaesthetics.isagenix1.com/en-gb/"
+            />
+            {/* <MenuItem text="About" link="/" /> */}
             <MenuItem text="Contact" link="/contact" />
           </div>
         </div>
