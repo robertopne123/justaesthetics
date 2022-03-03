@@ -106,7 +106,11 @@ export const Nav = () => {
             <MenuItem text="Catalogue" link="/catalogue" />
 
             <div className="bg-black h-[80px] w-[80px] -translate-y-[25px] rounded-full overflow-clip border-2 border-white shadow-lg z-20 md:mx-auto">
-              <img src="/logo.png"></img>
+              <Link href="/">
+                <a>
+                  <img src="/logo.png"></img>
+                </a>
+              </Link>
             </div>
             <MenuItem
               text="Isagenix"

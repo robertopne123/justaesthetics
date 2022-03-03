@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import { Nav } from "../components/nav";
 import { TestimonialCard } from "../components/testimonials/testimonialcards";
 
-export default function contacts() {
+export default function About() {
   return (
     <div className={styles.container}>
       <Head>
