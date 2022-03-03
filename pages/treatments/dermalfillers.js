@@ -15,8 +15,8 @@ export default function Home() {
     <div className={styles.container}>
       <TreatmentPageTemplate
         title=" Dermal Fillers"
-        description="Needs description
-         
+        description="Dermal fillers are used to achieve a smoother or fuller apperance in the face specifically are the mouth, chin, cheeks and lips 
+
 "
         option1="Cheeks"
         option2="Nose To Mouth"

@@ -14,9 +14,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <TreatmentPageTemplate
-        title=" Eyelash Growth Serum"
-        description="The SkinTox Facial is the perfect way to get that glowing, glass smooth skin that lasts and gets better due to it's progressive results.
-The treatment is delivered using a 24 Carat gold micro-channelled needle device. Toxin is combined with hyaluronic acid, growth factors, peptides and antioxidants to tighten pores, improve oily skin, stimulate new collagen plus elastic and improve pigmentation and fine lines."
+        title="Eyelash Growth Serum"
+        description="A serum to imporve the growth and thickness and eyelashes to achieve a full feel around the eyes."
       />
     </div>
   );
