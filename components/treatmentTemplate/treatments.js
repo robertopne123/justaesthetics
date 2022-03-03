@@ -1,4 +1,4 @@
-import { Treatment } from "./treatmentTemplate/treatment";
+import { Treatment } from "./treatment";
 
 export const Treatments = () => {
   return (
