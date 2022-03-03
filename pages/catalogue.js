@@ -43,17 +43,7 @@ export default function catalogue() {
           </p>
         </div>
       </div>
-      <div className="w-full relative inset-y-0 right-0">
-        <div className="absolute w-full h-[1000px]">
-          <Image
-            src="/face.png"
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            priority="true"
-          />
-        </div>
-      </div>
+      <div className="w-full relative inset-y-0 right-0"></div>
       <div className="w-full">
         <div className="mt-24 max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 px-4">
           <CatelogueItem
