@@ -9,7 +9,7 @@ import { CatelogueSnippet } from "../components/catelogue/catelogueSnippet";
 import { Schemes } from "../components/schemes";
 import { TestimonialCard } from "../components/testimonials/testimonialcards";
 
-export default function contacts() {
+export default function About() {
   return (
     <div className={styles.container}>
       <Head>
