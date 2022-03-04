@@ -10,12 +10,17 @@ module.exports = {
       },
       screens: {
         smmd: "670px",
+        lgxl: "1220px",
+        cutOff: "1200px",
         smsm: [{ min: "0px", max: "440px" }],
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      lineClamp: {
+        7: "7",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

@@ -32,6 +32,14 @@ export const Nav = () => {
     setActive(!active);
   };
 
+  function bookAppointment() {
+    const msg = document.getElementById("yourMessage");
+    const eType = document.getElementById("enquiryType");
+
+    msg.value = "Hi, I'm interested in booking an appointment";
+    eType.value = "2";
+  }
+
   return (
     <>
       <div className="bg-white h-[80px]">
@@ -50,9 +58,12 @@ export const Nav = () => {
           </div>
           <div className="flex flex-col justify-center">
             <div className="flex flex-row gap-4">
-              <Link href="/">
+              <Link href="#contact">
                 <a>
-                  <p className="font-semibold font-poppins text-xs px-4 py-2 rounded-full border hover:text-white hover:bg-black hover:border-none">
+                  <p
+                    className="font-semibold font-poppins text-xs px-4 py-2 rounded-full border hover:text-white hover:bg-black hover:border-none"
+                    onClick={() => bookAppointment()}
+                  >
                     BOOK AN APPOINTMENT
                   </p>
                 </a>
@@ -101,7 +112,7 @@ export const Nav = () => {
           </div>
         </div>
         <div className="bg-black max-h-[30px]">
-          <div className="bg-black mx-auto max-h-[30px] max-w-[900px] flex flex-row md:grid md:grid-cols-7 md:justify-center justify-start md:gap-10 px-4">
+          <div className="bg-black mx-auto max-h-[30px] max-w-[900px] flex flex-row md:grid md:grid-cols-5 md:justify-center justify-start md:gap-10 px-4">
             <MenuItem text="Treatments" link="/treatments" />
             <MenuItem text="Catalogue" link="/catalogue" />
 
@@ -116,7 +127,6 @@ export const Nav = () => {
               text="Isagenix"
               link="https://justaesthetics.isagenix1.com/en-gb/"
             />
-            {/* <MenuItem text="About" link="/" /> */}
             <MenuItem text="Contact" link="/contact" />
           </div>
         </div>

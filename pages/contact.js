@@ -7,6 +7,9 @@ import { Intro } from "../components/intro";
 
 import { CatelogueSnippet } from "../components/catelogue/catelogueSnippet";
 import { Schemes } from "../components/schemes";
+import { ContactForm } from "../components/contactForm";
+import { Footer } from "../components/footer";
+import { Testimonials } from "../components/testimonials";
 
 export default function contact() {
   return (
@@ -30,7 +33,7 @@ export default function contact() {
         ></iframe>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-8 sm:mt-24 gap-8 px-4 max-w-[1200px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-8 mb-12 sm:mt-24 gap-8 px-4 max-w-[1200px] mx-auto">
         <div className="border-2 border-black flex flex-col justify-center gap-4 p-4">
           <img
             src="/loc.svg"
@@ -54,119 +57,9 @@ export default function contact() {
         </div>
       </div>
 
-      <div className="min-h-[800px] w-full relative">
-        <Image
-          src="/facebanner.png"
-          alt="Banner Image"
-          layout="fill"
-          objectFit="cover"
-          priority
-          className="w-screen h-full object-cover absolute top-0 left-0"
-        />
-        <div className="relative w-full bg sm:mt-24 mt-8 mb-8 min-h-[00px] max-w-[1200px] mx-auto px-4">
-          <div className=" h-full w-full relative"></div>
-          <div className="w-full px-4 absolute left-0 top-0 z-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="flex flex-col justify-center">
-              <h3 className=" md:pl-4 mb-8 mt-12 text-3xl text-center md:text-start">
-                Message Us
-              </h3>
-              <form
-                className="flex flex-col"
-                name="contactForm"
-                method="POST"
-                action="/success"
-                netlify-honeypot="bot-field"
-                data-netlify="true"
-              >
-                <input type="hidden" name="form-name" value="contactForm" />
-                <input
-                  type="hidden"
-                  name="form-name"
-                  value="contactForm"
-                  className="h-[30px]"
-                />
-                <p className="hidden">
-                  <label>
-                    Don't fill this out if you're human:
-                    <input name="bot-field" />
-                  </label>
-                </p>
-
-                <div>
-                  <input
-                    className="border-b-4 bg-transparent border-black text-2xl placeholder-black h-[55px] appearance-none   mb-2 w-full pl-4 py-4 px-1 my-6"
-                    id="fName"
-                    type="text"
-                    name="Name"
-                    placeholder="Name *"
-                    required
-                  ></input>
-                </div>
-
-                <div>
-                  <input
-                    className="border-b-4 bg-transparent border-black text-2xl placeholder-black h-[55px] appearance-none   mb-2 w-full pl-4 py-2 px-1 my-6"
-                    id="email"
-                    type="text"
-                    name="email"
-                    placeholder="Email Address *"
-                    required
-                  ></input>
-                </div>
-
-                <div>
-                  <input
-                    className="border-b-4 bg-transparent border-black text-2xl placeholder-black h-[55px] appearance-none   mb-2 w-full pl-4 py-2 px-1 my-6"
-                    id="phone"
-                    type="text"
-                    name="phone"
-                    placeholder="Phone Number"
-                  ></input>
-                </div>
-
-                <div>
-                  <select
-                    className="border-b-4 bg-transparent border-black text-2xl placeholder-black h-[55px] appearance-none   mb-2 w-full pl-4 py-2 px-1 my-6"
-                    id="phone"
-                    type="text"
-                    name="phone"
-                    placeholder=""
-                    required
-                  >
-                    <option value="1" className="hidden">
-                      Enquiry Type *
-                    </option>
-                    <option value="2">Bookings</option>
-                    <option value="3">Treatments</option>
-                    <option value="4">Services</option>
-                  </select>
-                </div>
-
-                <div className="col-span-2">
-                  <textarea
-                    className="border-b-4 bg-transparent border-black text-2xl placeholder-black appearance-none   mb-2 w-full pl-4 py-2 px-1 my-6"
-                    id="companyDescription"
-                    name="companyDescription"
-                    placeholder="Your Message"
-                    required
-                  ></textarea>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 mt-6">
-                  <div>
-                    <button
-                      className="font-semibold bg-black text-white font-poppins text-md px-8 py-2 rounded-full border hover:text-black hover:bg-transparent hover:border hover:border-black"
-                      type="submit"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Testimonials />
+      <ContactForm />
+      <Footer />
     </div>
   );
 }
