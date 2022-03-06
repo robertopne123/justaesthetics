@@ -2,6 +2,7 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "react/jsx-key": 0,
-    "react/jsx-no-duplicate-props": 0
+    "react/jsx-no-duplicate-props": 0,
+    "react/no-unknown-property": 0
   }
 }
