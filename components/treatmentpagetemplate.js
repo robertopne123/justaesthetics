@@ -8,6 +8,7 @@ import { CatelogueSnippet } from "../components/catelogue/catelogueSnippet";
 import { Schemes } from "../components/schemes";
 import { Testimonials } from "../components/testimonials";
 import { Treatments } from "../components/treatmentTemplate/treatments";
+import { Footer } from "./footer";
 
 export const TreatmentPageTemplate = (props) => {
   return (
@@ -191,7 +192,7 @@ export const TreatmentPageTemplate = (props) => {
                   ></textarea>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 mt-6">
+                <div className="grid grid-cols-2 gap-4 mt-6 mb-5">
                   <div>
                     <button
                       className="font-semibold bg-black text-white font-poppins text-md px-8 py-2 rounded-full border hover:text-black hover:bg-transparent hover:border hover:border-black"
@@ -206,6 +207,7 @@ export const TreatmentPageTemplate = (props) => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
