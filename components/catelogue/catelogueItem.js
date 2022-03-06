@@ -1,6 +1,10 @@
 import Link from "next/link";
 
 export const CatelogueItem = (props) => {
+  function enquire() {
+    props.itemGrabber(props.productTitle);
+  }
+
   return (
     <div
       className={`border p-2 flex flex-col gap-4 relative h-[300px] ${
@@ -23,13 +27,14 @@ export const CatelogueItem = (props) => {
             £{props.productPrice}
           </p>
         </div>
-        <Link href={props.enquireLink}>
-          <a className="h-[20px] flex flex-col justify-center">
-            <p className="text-sky-400 font-poppins text-[12px] inline pl-2">
-              Message Me
-            </p>
-          </a>
-        </Link>
+        <div
+          className="h-[20px] flex flex-col justify-center"
+          onClick={() => enquire()}
+        >
+          <p className="text-sky-400 font-poppins text-[12px] inline pl-2">
+            Message Me
+          </p>
+        </div>
       </div>
     </div>
   );

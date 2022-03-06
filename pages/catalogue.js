@@ -11,7 +11,7 @@ import { Schemes } from "../components/schemes";
 import { CatelogueItem } from "../components/catelogue/catelogueItem";
 import { Footer } from "../components/footer";
 import { getFilteredData, Data } from "../components/catelogue/data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function catalogue() {
   const data = [
@@ -213,6 +213,102 @@ export default function catalogue() {
     },
   ];
 
+  const [query, setQuery] = useState("");
+  const [result, setResult] = useState([]);
+  const [sortType, setSortType] = useState("bestMatch");
+  const [selectedItem, setSelectedItem] = useState("");
+
+  let sorted = [];
+
+  const sortArray = (type) => {
+    const types = {
+      bestmatch: "bestMatch",
+      lowtohi: "lowToHigh",
+      hightolow: "highToLow",
+    };
+
+    let sortProperty = "";
+
+    switch (type) {
+      case "1":
+        sortProperty = types.bestmatch;
+        break;
+      case "2":
+        sortProperty = types.lowtohi;
+        break;
+      case "3":
+        sortProperty = types.hightolow;
+        break;
+    }
+
+    console.log(sortProperty);
+
+    switch (sortProperty) {
+      case types.bestmatch:
+        sorted = [...result];
+        break;
+      case types.lowtohi:
+        sorted = [...result].sort((a, b) => a.price - b.price);
+        break;
+      case types.hightolow:
+        sorted = [...result].sort((a, b) => b.price - a.price);
+        break;
+    }
+
+    console.log(sorted);
+
+    setResult(sorted);
+  };
+
+  const sortArrayFilter = (type, array) => {
+    const types = {
+      bestmatch: "bestMatch",
+      lowtohi: "lowToHigh",
+      hightolow: "highToLow",
+    };
+
+    let sortProperty = "";
+
+    switch (type) {
+      case "1":
+        sortProperty = types.bestmatch;
+        break;
+      case "2":
+        sortProperty = types.lowtohi;
+        break;
+      case "3":
+        sortProperty = types.hightolow;
+        break;
+    }
+
+    console.log(array);
+
+    switch (sortProperty) {
+      case types.bestmatch:
+        sorted = [...array];
+        break;
+      case types.lowtohi:
+        sorted = [...array].sort((a, b) => a.price - b.price);
+        break;
+      case types.hightolow:
+        sorted = [...array].sort((a, b) => b.price - a.price);
+        break;
+    }
+
+    console.log(sorted);
+
+    setResult(sorted);
+  };
+
+  useEffect(() => {
+    sortArray(sortType);
+
+    if (query === "") {
+      let sort = document.getElementById("sort");
+      sortArrayFilter(sort.value, data);
+    }
+  }, [sortType]);
+
   function getData() {
     return data;
   }
@@ -236,25 +332,7 @@ export default function catalogue() {
       sortType = "high-to-low";
     }
 
-    if (query == "") {
-      if (sortType == "low-to-high") {
-        sortedData = data.sort((a, b) => a.price - b.price);
-      } else if (sortType == "high-to-low") {
-        sortedData = data.sort((a, b) => b.price - a.price);
-      } else {
-        sortedData = data;
-      }
-
-      console.log(sortedData);
-    } else {
-      if (sortType == "low-to-high") {
-        sortedData = result.sort((a, b) => a.price - b.price);
-      } else if (sortType == "high-to-low") {
-        sortedData = result.sort((a, b) => b.price - a.price);
-      } else {
-        sortedData = result;
-      }
-    }
+    setResult(sortedData);
   }
 
   function search() {
@@ -266,12 +344,14 @@ export default function catalogue() {
     );
     // const foundItems = data.filter((item) => item{2}.includes(query));
     foundData = foundItems;
-    console.log(foundData);
-    setResult(foundItems);
-  }
 
-  const [query, setQuery] = useState("");
-  const [result, setResult] = useState([]);
+    let sort = document.getElementById("sort");
+
+    console.log(foundItems);
+
+    // setResult(foundItems);
+    sortArrayFilter(sort.value, foundItems);
+  }
 
   let foundData = [];
 
@@ -281,6 +361,11 @@ export default function catalogue() {
       {
       }
     }
+  }
+
+  function getSelectedItem(data) {
+    setSelectedItem(data);
+    console.log(data);
   }
 
   return (
@@ -309,43 +394,51 @@ export default function catalogue() {
           </p>
         </div>
       </div>
-      <div className="bg-gray-300 w-screen flex flex-row h-[50px] shadow-md">
-        <div className="inline-block relative w-64">
-          <input
-            className="block appearance-none h-full w-full bg-white font-poppins text-sm hover:border-gray-500 px-4 py-2 pr-8 shadow leading-tight focus:outline-none focus:shadow-outline"
-            id="search"
-            type="text"
-            name="search"
-            placeholder="Search products..."
-            onChange={(e) => getFilteredData(e)}
-          ></input>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-            <svg
-              fill="none"
-              stroke="#BCBFC2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              className="w-6 h-6"
-            >
-              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
+      <div className="bg-black w-screen h-[50px] shadow-md">
+        <div className="flex flex-row justify-end max-w-[1200px] mx-auto">
+          <div className="inline-block relative w-64">
+            <input
+              className="block appearance-none h-full w-full bg-white font-poppins text-sm hover:border-gray-500 px-4 py-2 pr-8 shadow leading-tight focus:outline-none focus:shadow-outline"
+              id="search"
+              type="text"
+              name="search"
+              placeholder="Search products..."
+              onChange={(e) => getFilteredData(e)}
+            ></input>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg
+                fill="none"
+                stroke="#BCBFC2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                className="w-6 h-6"
+              >
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col justify-center">
-          <select
-            className="bg-transparent border-black text-sm font-poppins font-bold placeholder-black h-[50px] outline-none w-full pl-4 px-1"
-            id="sort"
-            type="text"
-            name="sort"
-            placeholder=""
-            onChange={(e) => getSortedData(e)}
-          >
-            <option value="1">Best Match</option>
-            <option value="2">Price (low to high)</option>
-            <option value="3">Price (high to low)</option>
-          </select>
+          <div className="flex flex-col justify-center">
+            <select
+              className="bg-transparent text-white border-black text-sm font-poppins font-bold placeholder-black h-[50px] outline-none w-full pl-4 px-1"
+              id="sort"
+              type="text"
+              name="sort"
+              placeholder=""
+              onChange={(e) => setSortType(e.target.value)}
+            >
+              <option value="1" className="text-black">
+                Best Match
+              </option>
+              <option value="2" className="text-black">
+                Price (low to high)
+              </option>
+              <option value="3" className="text-black">
+                Price (high to low)
+              </option>
+            </select>
+          </div>
         </div>
       </div>
       <div className="w-full relative inset-y-0 right-0">
@@ -361,32 +454,16 @@ export default function catalogue() {
       </div>
       <div className="w-full">
         <div className="my-24 max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 px-4">
-          {query == "" &&
-            data.map((item) => {
-              return (
-                <CatelogueItem
-                  brand={item.brand}
-                  productImage={item.image}
-                  productTitle={item.title}
-                  productPrice={item.price}
-                  enquireLink={item.link}
-                  transparent="True"
-                />
-              );
-            })}
-          {query != "" &&
-            result.map((item) => {
-              return (
-                <CatelogueItem
-                  brand={item.brand}
-                  productImage={item.image}
-                  productTitle={item.title}
-                  productPrice={item.price}
-                  enquireLink={item.link}
-                  transparent="True"
-                />
-              );
-            })}
+          {result.map((item) => (
+            <CatelogueItem
+              brand={item.brand}
+              productImage={item.image}
+              productTitle={item.title}
+              productPrice={item.price}
+              itemGrabber={getSelectedItem}
+              transparent="True"
+            />
+          ))}
         </div>
       </div>
 
