@@ -12,7 +12,7 @@ export const Hero = () => {
 
   return (
     <>
-      <div className="bg-gray-300 relative">
+      <div className="bg-gray-300 relative -z-20">
         <img
           src="/header.png"
           width="100%"

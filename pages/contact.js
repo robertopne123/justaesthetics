@@ -22,10 +22,10 @@ export default function contact() {
 
       <Nav />
 
-      <h1 className="w-full text-center my-10 text-4xl uppercase">
+      <h1 className="w-full text-center my-10 text-4xl uppercase -z-50">
         Contact us
       </h1>
-      <div className="px-4 max-w-[1200px] mx-auto">
+      <div className="px-4 max-w-[1200px] mx-auto -z-50">
         <iframe
           src="https://snazzymaps.com/embed/375923"
           width="100%"

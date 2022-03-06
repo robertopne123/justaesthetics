@@ -371,24 +371,24 @@ export default function Catalogue() {
   return (
     <div className={styles.container}>
       <Nav />
-      <div className="w-full h-[200px] sm:h-[400px] relative ">
+      <div className="w-full h-[200px] sm:h-[400px] relative -z-10">
         <Image
           src="/catelogue.jpg"
           alt="Banner Image"
           layout="fill"
           objectFit="cover"
           priority="true"
-          className="absolute top-0 left-0 -z-20"
+          className="absolute top-0 left-0 -z-50"
         />
-        <div className="flex flex-col h-full justify-center gap-2 z-20">
-          <img src="/cosmedlogo.png" className="w-[100px] mx-auto" />
-          <h3 className="font-bold text-black text-2xl leading-5 text-center">
+        <div className="flex flex-col h-full justify-center gap-2 -z-40">
+          <img src="/cosmedlogo.png" className="w-[100px] mx-auto -z-10" />
+          <h3 className="font-bold text-black text-2xl leading-5 text-center -z-10">
             Professional
           </h3>
-          <h3 className="font-bold text-black text-2xl leading-5 text-center">
+          <h3 className="font-bold text-black text-2xl leading-5 text-center -z-10">
             Skincare Products
           </h3>
-          <p className="font-poppins text-[14px] font-thin text-black text-center">
+          <p className="font-poppins text-[14px] font-thin text-black text-center -z-10">
             Top quality products to <br />
             take care of your face
           </p>
@@ -396,7 +396,7 @@ export default function Catalogue() {
       </div>
       <div className="bg-black w-screen h-[50px] shadow-md">
         <div className="flex flex-row justify-end max-w-[1200px] mx-auto">
-          <div className="inline-block relative w-64">
+          <div className="inline-block relative smmd:w-64 w-full">
             <input
               className="block appearance-none h-full w-full bg-white font-poppins text-sm hover:border-gray-500 px-4 py-2 pr-8 shadow leading-tight focus:outline-none focus:shadow-outline"
               id="search"
@@ -411,7 +411,7 @@ export default function Catalogue() {
                 stroke="#BCBFC2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidt5="2"
                 viewBox="0 0 24 24"
                 className="w-6 h-6"
               >
@@ -421,7 +421,7 @@ export default function Catalogue() {
           </div>
           <div className="flex flex-col justify-center">
             <select
-              className="bg-transparent text-white border-black text-sm font-poppins font-bold placeholder-black h-[50px] outline-none w-full pl-4 px-1"
+              className="bg-transparent text-white border-black text-sm font-poppins font-bold placeholder-black h-[50px] outline-none w-[170px] pl-4 px-1"
               id="sort"
               type="text"
               name="sort"

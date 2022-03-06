@@ -42,7 +42,7 @@ export const Nav = () => {
 
   return (
     <>
-      <div className="bg-white h-[80px]">
+      <div className="bg-white">
         <div className="bg-white h-[50px] flex flex-row justify-between px-4">
           <div className="flex flex-col justify-center">
             <Link href="https://g.page/JUSTClinicalAesthetics?share">
@@ -131,16 +131,17 @@ export const Nav = () => {
           </div>
         </div>
         <div
-          className={`bg-[#181818] h-[220px] pt-[30px] w-full z-20 shadow-xl ${
+          className={`bg-[#181818] h-[160px] pt-[30px] w-full z-50 shadow-xl ${
             active ? "block" : "hidden"
           }`}
         >
-          <MobileMenuItem text="Treatments" link="/" />
-          <MobileMenuItem text="Shop" link="/" />
-          <MobileMenuItem text="Bookings" link="/" />{" "}
-          <MobileMenuItem text="Isagenix" link="/" />
-          <MobileMenuItem text="About" link="/" />
-          <MobileMenuItem text="Contact" link="/" />
+          <MobileMenuItem text="Treatments" link="/treatments" />
+          <MobileMenuItem text="Catalogue" link="/catalogue" />
+          <MobileMenuItem
+            text="Isagenix"
+            link="https://justaesthetics.isagenix1.com/en-gb/"
+          />
+          <MobileMenuItem text="Contact" link="/contact" />
         </div>
       </div>
     </>

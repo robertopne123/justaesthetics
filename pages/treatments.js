@@ -35,7 +35,7 @@ export default function catalogue() {
 
       <div className="my-16 bg-lightGrey p-8 max-w-[800px] min-mx-4 mx-auto">
         <div className="grid grid-cols-1 gap-y-5 bg-white p-8">
-          <h3 className="bg-black text-white text-2xl pl-8 -translate-x-8 py-1 font-bold w-[19ch] pr-4">
+          <h3 className="bg-black text-white smmd:text-2xl text-xl pl-8 -translate-x-8 py-1 font-bold pr-4">
             Consultations for
           </h3>
           <Link href="/treatments/anti-wrinkletreatment" passHref>
@@ -56,7 +56,7 @@ export default function catalogue() {
           <p> Treatment From £100</p>
         </div>
         <div className="bg-white p-8 mt-8">
-          <h3 className="bg-black text-white text-2xl pl-8 -translate-x-8 py-1 font-bold w-[38.5ch] pr-4">
+          <h3 className="bg-black text-white smmd:text-2xl text-xl pl-8 -translate-x-8 py-1 font-bold pr-4">
             Golden Collagen Skin Fusion Treatment
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 mt-8">
@@ -87,7 +87,7 @@ export default function catalogue() {
           </div>
         </div>
         <div className="bg-white p-8 mt-8">
-          <h3 className="bg-black text-white text-2xl pl-8 -translate-x-8 py-1 font-bold w-[36.5ch] pr-4">
+          <h3 className="bg-black text-white smmd:text-2xl text-xl pl-8 -translate-x-8 py-1 font-bold pr-4">
             Medical Grade Skin Care Treatments
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-5 mt-8">
@@ -96,47 +96,47 @@ export default function catalogue() {
                 <p className="font-semibold">Chemical Peel</p>
               </a>
             </Link>
-            <p className="sm:text-center">X1 £50</p>
-            <p className="sm:text-right">X4 £160</p>
+            <p className="sm:text-center">x1 £50</p>
+            <p className="sm:text-right">x4 £160</p>
             <Link href="/treatments/chemicalpeel" passHref>
               <a>
                 <p className="font-semibold">Luxury Chemical Peel</p>
               </a>
             </Link>
-            <p className="sm:text-center">X1 £70</p>
-            <p className="sm:text-right">X4 £240</p>
+            <p className="sm:text-center">x1 £70</p>
+            <p className="sm:text-right">x4 £240</p>
             <Link href="/treatments/dermapeel" passHref>
               <a>
                 <p className="font-semibold">Dermapeel</p>
               </a>
             </Link>
-            <p className="sm:text-center">X1 £60</p>
-            <p className="sm:text-right">X4 £200</p>
+            <p className="sm:text-center">x1 £60</p>
+            <p className="sm:text-right">x4 £200</p>
             <Link href="/treatments/dermapeel" passHref>
               <a>
                 <p className="font-semibold">Luxury Dermapeel</p>
               </a>
             </Link>
-            <p className="sm:text-center">X1 £80</p>
-            <p className="sm:text-right">X4 £280</p>
+            <p className="sm:text-center">x1 £80</p>
+            <p className="sm:text-right">x4 £280</p>
             <Link href="/treatments/dermaplane" passHref>
               <a>
                 <p className="font-semibold">Dermaplane</p>
               </a>
             </Link>
-            <p className="sm:text-center">X1 £40</p>
-            <p className="sm:text-right">X4 £140</p>
+            <p className="sm:text-center">x1 £40</p>
+            <p className="sm:text-right">x4 £140</p>
             <Link href="/treatments/dermaplane" passHref>
               <a>
                 <p className="font-semibold">The Ultimate dermaplane</p>
               </a>
             </Link>
-            <p className="sm:text-center">X1 £50</p>
-            <p className="sm:text-right">X4 £180</p>
+            <p className="sm:text-center">x1 £50</p>
+            <p className="sm:text-right">x4 £180</p>
           </div>
         </div>
         <div className="bg-white p-8 mt-8">
-          <h3 className="bg-black text-white text-2xl pl-8 -translate-x-8 py-1 font-bold w-[16.5ch] pr-4">
+          <h3 className="bg-black text-white smmd:text-2xl text-xl pl-8 -translate-x-8 py-1 font-bold pr-4">
             Dermal Fillers
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 mt-8">
@@ -167,7 +167,7 @@ export default function catalogue() {
           </div>
         </div>
         <div className="bg-white p-8 mt-8">
-          <h3 className="bg-black text-white text-2xl pl-8 -translate-x-8 py-1 font-bold w-[8ch] pr-4">
+          <h3 className="bg-black text-white smmd:text-2xl text-xl pl-8 -translate-x-8 py-1 font-bold pr-4">
             Lips
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-5 mt-8">
