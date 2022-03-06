@@ -35,8 +35,8 @@ export const Schemes = () => {
                       Get £10 off any recurring treatments
                     </h3>
                     <p className="font-poppins text-xs text-left">
-                      If you're in need of regular treatments, then you can get
-                      £10 off each subsequent treatment
+                      If you&apos;re in need of regular treatments, then you can
+                      get £10 off each subsequent treatment
                     </p>
                   </div>
                 </div>
@@ -50,7 +50,7 @@ export const Schemes = () => {
                     </h3>
                     <p className="font-poppins text-xs text-left">
                       Refer a friend, colleague, family member or anyone else
-                      and you'll both get 10% off your orders
+                      and you&apos;ll both get 10% off your orders
                     </p>
                   </div>
                 </div>

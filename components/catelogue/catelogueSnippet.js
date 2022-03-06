@@ -4,7 +4,7 @@ import { CatelogueItem } from "./catelogueItem";
 export const CatelogueSnippet = () => {
   return (
     <>
-      <div class="bg-black mt-10">
+      <div className="bg-black mt-10">
         <div className="grid smmd:grid-cols-4 grid-cols-2 smsm:grid-cols-1 gap-4 max-w-[1200px] px-4 mx-auto py-10">
           <div className="bg-gray-800 h-[300px] flex flex-col justify-between col-span-2 smsm:col-span-1 relative p-6">
             <img

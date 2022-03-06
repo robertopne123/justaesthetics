@@ -42,8 +42,8 @@ export default function About() {
                 <h3 className="text-left text-2xl font-bold z-20">About Me</h3>
                 <div className="w-[100px] h-0.5 bg-black z-20"></div>
                 <p className="w-[300px] mt-4 text-left z-20">
-                  Hello I'm Claire I run JUST Aesthetics, we offer a wide range
-                  of treatments and services to our clients, such
+                  Hello I&apos;m Claire I run JUST Aesthetics, we offer a wide
+                  range of treatments and services to our clients, such
                   as non-surgical treatments, results-driven skincare, and
                   nutritional health. Our clinic is located on Station Road in
                   Croston. 

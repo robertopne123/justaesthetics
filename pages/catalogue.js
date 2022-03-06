@@ -13,7 +13,7 @@ import { Footer } from "../components/footer";
 import { getFilteredData, Data } from "../components/catelogue/data";
 import { useState, useEffect } from "react";
 
-export default function catalogue() {
+export default function Catalogue() {
   const data = [
     {
       brand: "COSMED",
@@ -409,9 +409,9 @@ export default function catalogue() {
               <svg
                 fill="none"
                 stroke="#BCBFC2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 viewBox="0 0 24 24"
                 className="w-6 h-6"
               >
